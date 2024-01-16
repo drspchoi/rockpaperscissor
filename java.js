@@ -1,5 +1,3 @@
-console.log("what the fuck!")
-
 function getComputerChoice () {
     let a=["rock", "paper", "scissor"];
     //console.log(a[(Math.floor(Math.random() * a.length))])//
@@ -24,7 +22,7 @@ function playerSelection() {
         return player.toLowerCase()
 }
 
-function game() {
+/*function game() {
 
     console.log(playRound(playerSelection(),getComputerChoice()))
     
@@ -36,6 +34,5 @@ function game() {
     
     console.log(playRound(playerSelection(),getComputerChoice()))  
 } 
-
-
+*/
 game()
