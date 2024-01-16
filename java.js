@@ -30,6 +30,7 @@ function playerSelection() {
         button.addEventListener('click',()=> {
             const winner=playRound(button.id, getComputerChoice());
             total_attemp+=1
+            winner_message(total_attemp)
             if (winner=="player win") {
                 player_win+=1
             } 
@@ -54,8 +55,14 @@ function winner_message(winner, howmany, total_attemp) {
     const message=document.createElement('div');
     message.textContent=`${winner} won ${howmany} in ${total_attemp} attemps`;
     container.appendChild(message)
-    gameEnded = true;
 }
+function winner_message(total_attemp) {
+    const container=document.querySelector('div');
+    const attemp_message=document.createElement('div');
+    attemp_message.textContent=`${total_attemp} attemption`;
+    container.appendChild(attemp_message)
+}
+
 /*
 function game() {
     console.log(playRound(button.id,getComputerChoice()))
