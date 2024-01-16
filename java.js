@@ -1,4 +1,4 @@
-function getComputerChoice () {
+/*function getComputerChoice () {
     let a=["rock", "paper", "scissor"];
     //console.log(a[(Math.floor(Math.random() * a.length))])//
     return a[(Math.floor(Math.random() * a.length))]
@@ -16,12 +16,17 @@ function playRound(playerSelection, computerSelection) {
         return (`computer win. player: ${player} and computer: ${computer}`)
     }
 }
-
+*/
 function playerSelection() {
-    let player=prompt("rock paper scissor?");
-        return player.toLowerCase()
+    const rock = document.querySelector('#rock');
+    const paper= document.querySelector('#paper');
+    const scissor=document.querySelector('#scissor');
+    console.log(rock)
+    console.log(paper)
+    console.log(scissor)
 }
 
+playerSelection()
 /*function game() {
 
     console.log(playRound(playerSelection(),getComputerChoice()))
@@ -35,4 +40,3 @@ function playerSelection() {
     console.log(playRound(playerSelection(),getComputerChoice()))  
 } 
 */
-game()
