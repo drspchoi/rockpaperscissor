@@ -25,7 +25,7 @@ function playerSelection() {
     let player_win=0;
     let computer_win=0;
     let total_attempt=0;
-    let gameEnded = false;
+
     buttons.forEach((button) => {
         button.addEventListener('click',()=> {
             const winner=playRound(button.id, getComputerChoice());
@@ -44,7 +44,6 @@ function playerSelection() {
                 else {
                 winner_message("computer", computer_win,total_attempt)    
                 }
-            gameEnded = true;
             }
         })
     })
@@ -58,6 +57,8 @@ function winner_message(winner, howmany, total_attempt) {
 }
 function total_attemp_message(total_attempt) {
     const container=document.querySelector('div');
+    console.log(container.childNodes)
+    if (container.childNodes[1] ) container.removeChild(container.childNodes[1])
     const attemp_message=document.createElement('div');
     attemp_message.textContent=`${total_attempt} attempts`;
     container.appendChild(attemp_message)
